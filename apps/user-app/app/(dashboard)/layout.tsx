@@ -1,5 +1,5 @@
 import { SidebarItem } from "../../components/SidebarItem";
-import {TransferIcon,HomeIcon,TransactionsIcon} from "../../components/Icons"
+import {TransferIcon,HomeIcon,TransactionsIcon,P2PTransferIcon} from "../../components/Icons"
 export default function Layout({
   children,
 }: {
@@ -12,6 +12,7 @@ export default function Layout({
                 <SidebarItem href={"/dashboard"} icon={<HomeIcon />} title="Home" />
                 <SidebarItem href={"/transfer"} icon={<TransferIcon />} title="Transfer" />
                 <SidebarItem href={"/transactions"} icon={<TransactionsIcon />} title="Transactions" />
+                <SidebarItem href={"/p2p"} icon={<P2PTransferIcon/>} title="P2P Transfer"/>
             </div>
         </div>
             {children}
