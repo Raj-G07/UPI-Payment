@@ -1,10 +1,9 @@
-import {PrismaClient } from "@prisma/client"
-
-import bcrypt from "bcrypt"
+import {PrismaClient } from "@prisma/client";
+import bcrypt from "bcrypt";
 
 const prisma = new PrismaClient()
 
-async function main()() {
+async function main() {
     const alice = await prisma.user.upsert({
         where:{number: "11111133"},
         update:{},
@@ -62,5 +61,5 @@ async function main()() {
      .catch(async (e) => {
       console.error(e)
       await prisma.$disconnect()
-    process.exit(1)
+      process.exit(1)
   })
